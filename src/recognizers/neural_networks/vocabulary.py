@@ -13,7 +13,7 @@ class VocabularyData:
     allow_unk: bool
 
 def load_vocabulary_data_from_file(path: pathlib.Path) -> VocabularyData:
-    data = torch.load(path)
+    data = torch.load(path, weights_only=False)
     return VocabularyData(data['tokens'], data['allow_unk'])
 
 def get_vocabularies(
