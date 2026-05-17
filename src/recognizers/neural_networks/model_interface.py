@@ -4,7 +4,8 @@ from typing import Optional
 import torch
 
 from rau.models.common.shared_embeddings import get_shared_embeddings
-from rau.models.rnn import LSTM, SimpleRNN
+from rau.models.rnn.lstm import LSTM
+from rau.models.rnn.simple_rnn import SimpleRNN
 from rau.models.transformer.positional_encodings import (
     SinusoidalPositionalEncodingCacher
 )
